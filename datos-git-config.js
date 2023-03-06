@@ -9,6 +9,9 @@ lo anterior en ocaciones no funciona en windows y es necesario ingresar la infor
 user.name = name
 user.email= email
 
+ojo esto no siempre es necesario en windows
+
+
 lo anterior no parece ser importante en linux. a pesar de que la información no se añade
 en el archivo config si fue ingresada en alguna base de datos
 
