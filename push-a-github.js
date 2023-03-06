@@ -17,6 +17,13 @@ o ocupar el protocolo SSH...
 existe un programa de github que se llama GitHub CLI que permite clonar
 y y gestionar los usuarios de repos github
 
+en windows esto no suele dar problemas aparentemente las credenciales 
+son gestionadas por un programa de windows-credenciales.
+si se clona un repo de una fuente ya logeada por tener otro 
+repo git de la misma fuente no solicitara usuario y key github
+esto mismo puede ser un conflicto si es que se asocia a una fuente distinta
+(otro usuario github)
+
 
  `;
 
