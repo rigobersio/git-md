@@ -11,3 +11,7 @@ var texto =`
 `;
 
 cosole.log(texto);
+
+// nuevo protocolo 10-08-2023
+// formato "(equipo)Nuevo: ArchivoNUevo.js; Eliminado: ***; Editado: *** (comentario)"
+//no importa el orden de Nuevo, Eliminado o Editado.
