@@ -17,4 +17,19 @@ user.name = name
 user.email= email
 ```
 
-    <aca hay que considerar que normalmente hay 2 programas involucrados y los 2 son de empresas distintas, por ejemplo, si se utiliza GitHub, Microsoft proporcionara un proceso para vincular la cuenta GitHub con el repositorio **github-cli** y al mismo tiempo gestionará el usuario y el correo del repo a nivel de Git. No obstante en ocasiones esto no ocurre por diferentes circuncisas como que lo anterior no le vale a la nueva versión Git e igualmente hay que hacer el proceso de Git config. En otros caso es un error o un conflicto y hay que intentar buscar el ajuste>.
+# GitHub
+
+Acá hay que considerar que normalmente hay 2 programas involucrados y los 2 son de empresas distintas, por ejemplo, si se utiliza GitHub, Microsoft proporcionara un proceso para vincular la cuenta GitHub con el repositorio **github-cli** y al mismo tiempo **en ocasiones** gestionará el usuario y el correo del repo a nivel de Git. No obstante en otras ocasiones **esto no ocurre** debido a diferentes circuncisas.
+
+# github-cli
+
+la siguiente instrucción es para fedora pero hay que verificar ya que por ejemplo en este caso en particular Fedora está haciendo la transición a dnf 5
+```bash
+sudo dnf install gh
+```
+luego de instalar github-cli ejecutar: 
+
+```bash
+gh auth login
+```
+y seguir las instrucciones
