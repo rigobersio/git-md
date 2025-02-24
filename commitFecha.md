@@ -1,13 +1,13 @@
 
 # example.
 
-git add . && GIT_AUTHOR_DATE="2024-08-11T00:00:00" GIT_COMMITTER_DATE="2024-08-11T00:00:00" git commit -m "(atlas)delete:part1copy()" && git push -u origin main
+git add . && GIT_AUTHOR_DATE="2025-03-01T17:33:00" GIT_COMMITTER_DATE="2025-03-01T17:33:00" git commit -m "mensaje" && git push -u origin main
 
-- Git permite hacer commit con fechas que no sean cronologicamente lineales
-- Existen algunos repositorios con proteciones, como por ejemplo, GitHub que por defecto no permite retroceder cronologicamente
+- Git permite hacer commit con fechas que no sean cronológicamente lineales
+- Existen algunos repositorios con proteciones, como por ejemplo, GitHub que por defecto no permite retroceder cronológicamente
 ## en caso de cometer este error
 
-git log --oneline para optener los hash del los commit de manera abrebiada
+git log --oneline para obtener los hash del los commit de manera abreviada
 
 Mantener los cambios en el área de trabajo (working directory):
 
