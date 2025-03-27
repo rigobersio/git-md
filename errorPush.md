@@ -125,20 +125,6 @@ but the current user is: 'S-1-5-21-YYYY'
 
 2. Alternativamente, clonar nuevamente el repositorio con el usuario correcto
 
-### Error de conversión de saltos de línea
-
-```bash
-warning: in the working copy of 'archivo.md', LF will be replaced by CRLF the next time Git touches it
-```
-
-**Solución:**
-
-1. Configurar Git para manejar automáticamente los saltos de línea:
-   ```bash
-   git config --global core.autocrlf true  # Para Windows
-   git config --global core.autocrlf input  # Para Linux/Mac
-   ```
-
 ## Consejos generales
 
 1. **Mantén Git actualizado**: Las versiones más recientes suelen tener mejores mecanismos de autenticación y menos errores.
