@@ -1,58 +1,89 @@
-# git init
-agregar opciones de git init
+# Git Init
 
-# git config
+El comando `git init` se utiliza para inicializar un nuevo repositorio Git en un directorio. Algunas opciones útiles:
 
-    antes del primer commit:
+- `git init`: Inicializa un repositorio Git en el directorio actual
+- `git init --bare`: Crea un repositorio sin directorio de trabajo (útil para repositorios remotos)
+- `git init <nombre-directorio>`: Crea un nuevo directorio e inicializa un repositorio Git en él
+- `git init --template=<plantilla>`: Inicializa usando una plantilla específica
 
-        git config --global user.name <ingresar name> && user.email <ingresar email>
+# Git Config
 
-    lo anterior en ocasiones no funciona (sobretodo en windows) y es necesario ingresar la información
-    manualmente en el archivo config dentro de la carpeta .git:
+Antes del primer commit es necesario configurar la identidad del usuario:
+
+```bash
+git config --global user.name "Tu Nombre"
+git config --global user.email "tu.email@ejemplo.com"
+```
+
+Lo anterior en ocasiones no funciona (sobre todo en Windows) y es necesario ingresar la información manualmente en el archivo config dentro de la carpeta .git:
 
 ```bash
 [user]
+    name = Tu Nombre
+    email = tu.email@ejemplo.com
+```
 
-user.name = name
-user.email= email
+Otras configuraciones útiles:
+
+```bash
+# Configurar editor predeterminado
+git config --global core.editor "code --wait"
+
+# Configurar herramienta de merge
+git config --global merge.tool "kdiff3"
+
+# Ver todas las configuraciones actuales
+git config --list
 ```
 
 # GitHub
 
-Acá hay que considerar que normalmente hay 2 programas involucrados y los 2 son de empresas distintas, por ejemplo, si se utiliza GitHub, Microsoft proporcionara un proceso para vincular la cuenta GitHub con el repositorio **github-cli** y al mismo tiempo **en ocasiones** gestionará el usuario y el correo del repo a nivel de Git. No obstante en otras ocasiones **esto no ocurre** debido a diferentes circuncisas.
+Acá hay que considerar que normalmente hay 2 programas involucrados y los 2 son de empresas distintas. Por ejemplo, si se utiliza GitHub, Microsoft proporciona un proceso para vincular la cuenta GitHub con el repositorio a través de **GitHub CLI** y al mismo tiempo **en ocasiones** gestionará el usuario y el correo del repo a nivel de Git. No obstante, en otras ocasiones **esto no ocurre** debido a diferentes circunstancias.
 
-# github-cli
+# GitHub CLI
 
-la siguiente instrucción es para fedora pero hay que verificar ya que por ejemplo en este caso en particular Fedora está haciendo la transición a dnf 5
+GitHub CLI (gh) es una herramienta oficial que permite gestionar credenciales de GitHub y ayuda a clonar y enviar cambios a repositorios desde la línea de comandos.
+
+## Instalación de GitHub CLI
+
+Para diferentes sistemas operativos:
+
 ```bash
+# Fedora (verificar ya que Fedora está haciendo la transición a dnf 5)
 sudo dnf install gh
+
+# Arch Linux
+sudo pacman -S github-cli
+
+# Ubuntu/Debian
+sudo apt install gh
+
+# Windows (con Chocolatey)
+choco install gh
+
+# macOS (con Homebrew)
+brew install gh
 ```
-luego de instalar github-cli ejecutar: 
+
+## Autenticación con GitHub CLI
+
+Luego de instalar GitHub CLI, ejecutar:
 
 ```bash
 gh auth login
 ```
-y seguir las instrucciones
 
+Y seguir las instrucciones:
+- Presionar Enter si el proceso no avanza
+- Con las flechas seleccionar protocolo HTTPS
+- Elegir autentificar en Git con GitHub (y)
 
-# Logueo GitHub
+## Alternativas
 
-## Esto es conveniente si git user and pass ERROR
+- En Windows existe GitHub Desktop que proporciona una interfaz gráfica para gestionar repositorios
+- También se puede usar la autenticación por token de acceso personal (PAT) configurando las credenciales manualmente
 
-### GitHub CLI permite gestionar credenciales GitHub y ayuda a clonar y pushear
-* actualmente hay otra app para escritorio que hace todos esos jíbiris.
+## Solución a problemas de autenticación
 
-### instalar GitHub CLI:
- 
-* para arch es sudo pacaman -S github-cli.
-* para otras distro hacer busqueda en el buscador GitHub.
-
-
-### loguearse con GitHub CLI:
- 
-* en el terminal ejecutar gh auth login y seguir las instrucciones
-* apretar enter si el proceso no avanza
-* con flechas seleccionar protocolo HTTPS
-* elegir autentificar en Git con GitHub (y)
-
-### En windows hay una API que hacer todos los jíbiris
+Si aparece error de usuario y contraseña al intentar hacer push, la autenticación con GitHub CLI puede resolver el problema, ya que gestiona las credenciales de forma segura y compatible con los cambios en la política de autenticación de GitHub.
