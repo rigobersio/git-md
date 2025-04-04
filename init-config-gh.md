@@ -15,7 +15,7 @@ Antes del primer commit es necesario configurar la identidad del usuario:
 git config --global user.name "Tu Nombre"
 git config --global user.email "tu.email@ejemplo.com"
 ```
-> Las comillas son obligatorias, especialmente si el nombre o correo contienen espacios.
+> Las comillas son obligatorias (sobre todo si el nombre o correo contienen espacios).
 
 Lo anterior en ocasiones no funciona (sobre todo en Windows) y es necesario ingresar la información manualmente en el archivo config dentro de la carpeta .git:
 
