@@ -57,7 +57,7 @@ sudo dnf install gh
 # Arch Linux
 sudo pacman -S github-cli
 
-# Ubuntu/Debian
+# instalación Debian, Ubuntu y derivados
 sudo apt install gh
 
 # Windows (con Chocolatey)
