@@ -58,6 +58,13 @@ sudo dnf install gh
 sudo pacman -S github-cli
 
 # instalación Debian, Ubuntu y derivados
+
+verificar wget
+
+```bash
+(type -p wget >/dev/null || (sudo apt update && sudo apt-get install wget -y)) \
+```
+
 sudo apt install gh
 
 # Windows (con Chocolatey)
