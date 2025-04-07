@@ -64,6 +64,11 @@ verificar wget
 ```bash
 (type -p wget >/dev/null || (sudo apt update && sudo apt-get install wget -y)) \
 ```
+crear el directorio de keyrings
+
+```bash
+sudo mkdir -p -m 755 /etc/apt/keyrings
+```
 
 sudo apt install gh
 
