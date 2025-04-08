@@ -70,6 +70,13 @@ crear el directorio de keyrings
 sudo mkdir -p -m 755 /etc/apt/keyrings
 ```
 
+descargar la clave GPG de GitHub CLI
+
+```bash
+out=$(mktemp) && wget -nv -O$out https://cli.github.com/packages/githubcli-archive-keyring.gpg
+```
+
+
 sudo apt install gh
 
 # Windows (con Chocolatey)
