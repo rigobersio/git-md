@@ -75,6 +75,11 @@ descargar la clave GPG de GitHub CLI
 ```bash
 out=$(mktemp) && wget -nv -O$out https://cli.github.com/packages/githubcli-archive-keyring.gpg
 ```
+clave al directorio de keyrings
+
+```bash
+cat $out | sudo tee /etc/apt/keyrings/githubcli-archive-keyring.gpg > /dev/null
+```
 
 
 sudo apt install gh
