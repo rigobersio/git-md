@@ -81,6 +81,9 @@ clave al directorio de keyrings
 cat $out | sudo tee /etc/apt/keyrings/githubcli-archive-keyring.gpg > /dev/null
 ```
 
+dar permisos a la clave GPG
+
+
 
 sudo apt install gh
 
