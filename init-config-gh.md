@@ -94,6 +94,14 @@ Crear el directorio sources.list.d.
 sudo mkdir -p -m 755 /etc/apt/sources.list.d
 ```
 
+añadir el repositorio de GitHub CLI
+
+```bash
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
+```
+
+
+
 sudo apt install gh
 
 # Windows (con Chocolatey)
